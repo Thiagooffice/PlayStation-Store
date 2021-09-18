@@ -18,7 +18,7 @@ body{
 }
 .container{
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 80%;
     background-color: white;
     box-shadow: 0 0 1rem 0 black;
@@ -27,6 +27,7 @@ body{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    overflow: hidden;
 }
 
 
@@ -34,6 +35,7 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
+    margin-top: -15px;
 }
 
 .logo{
@@ -66,7 +68,19 @@ li:hover{
 }
 .column-1{
     margin-left:30px;
+    position: relative;
 }
+
+.column-1::before{
+    content: "";
+    width: 8px;
+    height: 57%;
+    background: linear-gradient(#ff469f, #ff6062);
+    position: absolute;
+    left: -25px;
+    top: 8px;
+}
+
 h2{
     font-size: 54px;
 }
@@ -106,16 +120,40 @@ button{
 
 .controller{
     width: 95%;
-    z-index: 1;
+    z-index: 2;
 }
 .color-box{
     position: absolute ;
     right: 0;
     top: 0;
-    background: linear-gradient(to right, #fb5283, #ff3527);
+    background: linear-gradient(to right, #fb648f, #f12517);
     height: 100%;
     width: 80%;
     border-radius: 20px 0 0 20px;
-    z-index: 2;
+    z-index: 1;
+    transform: translateX(50px);
 
+}
+.ButtonAdc{
+    z-index: 2;
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    margin-left: 90%;
+    background-color: red;
+}
+.imgAdc{
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-links img{
+    height: 20px;
+    margin: 20px;
+    cursor: pointer;
 }
